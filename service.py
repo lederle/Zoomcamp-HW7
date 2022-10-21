@@ -1,9 +1,7 @@
 import bentoml
-from bento.io import JSON
+from bentoml.io import JSON
 
-model_reference = bentoml.xgboost.get("credit_risk_model:latest")
-
-model_runner = model_reference.to_runner()
+model_runner = bentoml.xgboost.get("credit_risk_model:latest").to_runner()
 
 service = bentoml.Service("credit_risk_classifier", runners = [model_runner])
 
