@@ -1,7 +1,7 @@
 import bentoml
 from bento.io import JSON
 
-model_reference = bentoml.xgboost.get("credit_risk_model:dmp4bfsq5c7bpl56")
+model_reference = bentoml.xgboost.get("credit_risk_model:latest")
 
 model_runner = model_reference.to_runner()
 
