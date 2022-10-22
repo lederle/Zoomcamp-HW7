@@ -1,0 +1,9 @@
+service: "coolmodel:service"
+labels:
+  owner: bentoml-team
+  project: gallery
+include:
+- "*.py"
+python:
+  packages:
+    - sklearn
