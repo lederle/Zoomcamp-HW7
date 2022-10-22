@@ -16,7 +16,7 @@ class MLZoomUser(HttpUser):
     """
 
     @task
-    def classify(self):
-        self.client.post("/classify", json=sample)
+    def process(self):
+        self.client.post("/process", json=sample)
 
     wait_time = between(0.01, 2)
