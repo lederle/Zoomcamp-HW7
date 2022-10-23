@@ -1,7 +1,7 @@
 import bentoml
 from bentoml.io import NumpyNdarray
 
-model_runner = bentoml.sklearn.get("mlzoomcamp_homework:qtzdz3slg6mwwdu5").to_runner()
+model_runner = bentoml.sklearn.get("mlzoomcamp_homework:jsi67fslz6txydu5").to_runner()
 
 service = bentoml.Service("coolmodel", runners = [model_runner])
 
