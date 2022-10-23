@@ -9,3 +9,5 @@ print(f"4) scikit version in coolmodel: {os.popen('bentoml models get mlzoomcamp
 
 response = os.popen("curl -X POST -H 'Content-Type: application/json' -d @test_array.json http://localhost:3000/process").read().rstrip()
 print(f"5) response from coolmodel (is server up?): {response}")
+
+print("6) coolmodel2 has better 99th percentile.")
