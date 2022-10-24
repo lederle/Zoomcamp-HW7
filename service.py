@@ -27,11 +27,11 @@ service = bentoml.Service("credit_risk_classifier", runners = [model_runner])
 
 
 @service.api(input = JSON(pydantic_model = CreditApplication), output = JSON())
-def classify(credit_application):
+async def classify(credit_application):
     application_data = credit_application.dict()
     client = dv.transform(application_data)
     # TODO: naming is wack
-    prediction = model_runner.predict.run(client)
+    prediction = await model_runner.predict.async_run(client)
     print(prediction)
 
     result = prediction[0]
